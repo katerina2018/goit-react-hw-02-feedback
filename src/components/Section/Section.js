@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { SectionWrapper, SectionTitle } from './Section.styles';
 
 const Section = ({ title, children }) => {
   return (
-    <section className="Feedback">
-      {title && <h2>{title}</h2>}
+    <SectionWrapper>
+      {title && <SectionTitle>{title}</SectionTitle>}
       {children}
-    </section>
+    </SectionWrapper>
   );
 };
 

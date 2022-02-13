@@ -1,14 +1,19 @@
 import React from 'react';
+import { ButtonWrapper, ButtonTag } from './FeedbackOptions.styles';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <div>
+    <ButtonWrapper>
       {Object.keys(options).map(elem => (
-        <button key={elem} type="button" onClick={() => onLeaveFeedback(elem)}>
+        <ButtonTag
+          key={elem}
+          type="button"
+          onClick={() => onLeaveFeedback(elem)}
+        >
           {elem}
-        </button>
+        </ButtonTag>
       ))}
-    </div>
+    </ButtonWrapper>
   );
 };
 
